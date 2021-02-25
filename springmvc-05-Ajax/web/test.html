@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe测试体验页面无刷新</title>
+    <script>
+        function go(){
+            let value = document.getElementById("url").value;
+            document.getElementById("window").src=value;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p>请输入要访问的网址：</p>
+        <p>
+            <input type="text" id="url">
+            <input type="button" value="提交" onclick="go()">
+        </p>
+
+    </div>
+
+    <div>
+        <iframe id="window"  frameborder="0" style="width: 100%;height: 500px;"></iframe>
+    </div>
+</body>
+</html>
